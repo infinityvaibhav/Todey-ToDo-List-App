@@ -10,7 +10,7 @@ import UIKit
 class ToDoListViewController: UITableViewController {
     
     var itemArray = [Item]()
-    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Items.json")
+    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Items.plist")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +56,7 @@ class ToDoListViewController: UITableViewController {
     }
     
     func  saveItems() {
-        let encoder = JSONEncoder()
+        let encoder = PropertyListEncoder()
         
         do {
             let data = try encoder.encode(self.itemArray)
@@ -68,7 +68,7 @@ class ToDoListViewController: UITableViewController {
     
     func loadItems() {
         if let data = try? Data(contentsOf: dataFilePath!) {
-            let decoder = JSONDecoder()
+            let decoder = PropertyListDecoder()
             do {
                 itemArray = try decoder.decode([Item].self, from: data)
             } catch {
