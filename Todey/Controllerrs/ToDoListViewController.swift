@@ -20,10 +20,18 @@ class ToDoListViewController: UITableViewController {
         
         
         print(dataFilePath)
-        loadItems()
+//        loadItems()
+        print("gf")
+        DispatchQueue.main.async {
+            print("dispat")
+        }
         
+        DispatchQueue.global().async {
+            print("global")
+        }
+        
+        print("direct")
     }
-
     
     @IBAction func addBarButtonPressed(_ sender: UIBarButtonItem) {
         
@@ -107,6 +115,8 @@ extension ToDoListViewController {
         tableView.reloadData()
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    
 }
 
 //MARK: - search delegate
