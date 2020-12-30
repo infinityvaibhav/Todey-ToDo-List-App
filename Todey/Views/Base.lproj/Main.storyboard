@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eT5-dh-gJH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eT5-dh-gJH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Todey-->
         <scene sceneID="IJF-JM-RuB">
             <objects>
-                <tableViewController id="hF6-0j-y8P" sceneMemberID="viewController">
+                <tableViewController id="hF6-0j-y8P" customClass="CategoryTableViewController" customModule="Todey" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bgk-aa-Tc9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="toj-Pd-3D7">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CategoryCell" id="toj-Pd-3D7">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="toj-Pd-3D7" id="7RO-9q-oUR">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -30,13 +30,23 @@
                             <outlet property="delegate" destination="hF6-0j-y8P" id="LmG-s8-byu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="40S-Cn-9MW"/>
+                    <navigationItem key="navigationItem" title="Todey" id="40S-Cn-9MW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="AxB-am-UsZ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="hF6-0j-y8P" id="M7G-eA-Y3V"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="S1j-5A-KJ5" kind="show" identifier="goToItems" id="W3e-BX-l2C"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eYH-yq-0vF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1274" y="113"/>
         </scene>
-        <!--Todey-->
+        <!--Items-->
         <scene sceneID="uvK-Lf-IaQ">
             <objects>
                 <tableViewController id="S1j-5A-KJ5" customClass="ToDoListViewController" customModule="Todey" customModuleProvider="target" sceneMemberID="viewController">
@@ -67,7 +77,7 @@
                             <outlet property="delegate" destination="S1j-5A-KJ5" id="Mfi-s3-ONY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Todey" id="MBx-Bn-6E5">
+                    <navigationItem key="navigationItem" title="Items" id="MBx-Bn-6E5">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="vtr-7R-dmI">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -95,7 +105,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="hF6-0j-y8P" kind="relationship" relationship="rootViewController" id="wGV-jY-8N9"/>
+                        <segue destination="hF6-0j-y8P" kind="relationship" relationship="rootViewController" id="P8W-uD-Jjh"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vdC-0q-IIN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -2,7 +2,7 @@
 //  Item+CoreDataProperties.swift
 //  Todey
 //
-//  Created by 1389028 on 13/11/20.
+//  Created by 1389028 on 31/12/20.
 //
 //
 
@@ -18,6 +18,7 @@ extension Item {
 
     @NSManaged public var done: Bool
     @NSManaged public var title: String?
+    @NSManaged public var parentCategory: Category?
 
 }
 
