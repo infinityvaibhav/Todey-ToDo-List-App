@@ -13,13 +13,28 @@
 		A338E61225578A9D00A9E6A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A338E61025578A9D00A9E6A9 /* Main.storyboard */; };
 		A338E61425578A9E00A9E6A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A338E61325578A9E00A9E6A9 /* Assets.xcassets */; };
 		A338E61725578A9E00A9E6A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A338E61525578A9E00A9E6A9 /* LaunchScreen.storyboard */; };
-		A354C7E8255E4047003BEC05 /* DataModel.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = A3B15BA0255CD9EC00D0B2AB /* DataModel.xcdatamodeld */; };
+		A375658225A23DA200178B69 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E2BF6D25A21086003EC33B /* Realm.framework */; };
+		A375658525A23DA400178B69 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E2BF7025A2108E003EC33B /* RealmSwift.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		A375658B25A23E9C00178B69 /* RealmSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A3E2BF7025A2108E003EC33B /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A375658C25A23E9C00178B69 /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A3E2BF6D25A21086003EC33B /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A375659025A251A900178B69 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A375658F25A251A900178B69 /* Item.swift */; };
+		A375659225A251BD00178B69 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A375659125A251BD00178B69 /* Category.swift */; };
 		A3845DC2259D183200F83905 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3845DC1259D183200F83905 /* CategoryTableViewController.swift */; };
-		A3845DC7259D1F1B00F83905 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3845DC5259D1F1B00F83905 /* Category+CoreDataClass.swift */; };
-		A3845DC8259D1F1B00F83905 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3845DC6259D1F1B00F83905 /* Category+CoreDataProperties.swift */; };
-		A3845DCD259D29B500F83905 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3845DCB259D29B500F83905 /* Item+CoreDataClass.swift */; };
-		A3845DCE259D29B500F83905 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3845DCC259D29B500F83905 /* Item+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A375658A25A23E7700178B69 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A375658B25A23E9C00178B69 /* RealmSwift.framework in CopyFiles */,
+				A375658C25A23E9C00178B69 /* Realm.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A338E60725578A9D00A9E6A9 /* Todey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todey.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,12 +45,11 @@
 		A338E61325578A9E00A9E6A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A338E61625578A9E00A9E6A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A338E61825578A9E00A9E6A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A375658F25A251A900178B69 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		A375659125A251BD00178B69 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		A3845DC1259D183200F83905 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
-		A3845DC5259D1F1B00F83905 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A3845DC6259D1F1B00F83905 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A3845DCB259D29B500F83905 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A3845DCC259D29B500F83905 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A3B15BA1255CD9EC00D0B2AB /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		A3E2BF6D25A21086003EC33B /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		A3E2BF7025A2108E003EC33B /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A375658225A23DA200178B69 /* Realm.framework in Frameworks */,
+				A375658525A23DA400178B69 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,10 +68,8 @@
 		A338E5FE25578A9D00A9E6A9 = {
 			isa = PBXGroup;
 			children = (
-				A3845DCB259D29B500F83905 /* Item+CoreDataClass.swift */,
-				A3845DCC259D29B500F83905 /* Item+CoreDataProperties.swift */,
-				A3845DC5259D1F1B00F83905 /* Category+CoreDataClass.swift */,
-				A3845DC6259D1F1B00F83905 /* Category+CoreDataProperties.swift */,
+				A3E2BF7025A2108E003EC33B /* RealmSwift.framework */,
+				A3E2BF6D25A21086003EC33B /* Realm.framework */,
 				A338E60925578A9D00A9E6A9 /* Todey */,
 				A338E60825578A9D00A9E6A9 /* Products */,
 			);
@@ -84,7 +98,8 @@
 		A3BF11B725595C8400891215 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A3B15BA0255CD9EC00D0B2AB /* DataModel.xcdatamodeld */,
+				A375659125A251BD00178B69 /* Category.swift */,
+				A375658F25A251A900178B69 /* Item.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -127,6 +142,8 @@
 				A338E60325578A9D00A9E6A9 /* Sources */,
 				A338E60425578A9D00A9E6A9 /* Frameworks */,
 				A338E60525578A9D00A9E6A9 /* Resources */,
+				A3E2BF7725A210D7003EC33B /* Carthage Script */,
+				A375658A25A23E7700178B69 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -174,7 +191,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A354C7E8255E4047003BEC05 /* DataModel.xcdatamodeld in Resources */,
 				A338E61725578A9E00A9E6A9 /* LaunchScreen.storyboard in Resources */,
 				A338E61425578A9E00A9E6A9 /* Assets.xcassets in Resources */,
 				A338E61225578A9D00A9E6A9 /* Main.storyboard in Resources */,
@@ -183,19 +199,40 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A3E2BF7725A210D7003EC33B /* Carthage Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Realm.framework",
+				"$(SRCROOT)/RealmSwift.framework",
+			);
+			name = "Carthage Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A338E60325578A9D00A9E6A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3845DC7259D1F1B00F83905 /* Category+CoreDataClass.swift in Sources */,
+				A375659225A251BD00178B69 /* Category.swift in Sources */,
+				A375659025A251A900178B69 /* Item.swift in Sources */,
 				A338E60F25578A9D00A9E6A9 /* ToDoListViewController.swift in Sources */,
-				A3845DCE259D29B500F83905 /* Item+CoreDataProperties.swift in Sources */,
 				A338E60B25578A9D00A9E6A9 /* AppDelegate.swift in Sources */,
 				A338E60D25578A9D00A9E6A9 /* SceneDelegate.swift in Sources */,
 				A3845DC2259D183200F83905 /* CategoryTableViewController.swift in Sources */,
-				A3845DC8259D1F1B00F83905 /* Category+CoreDataProperties.swift in Sources */,
-				A3845DCD259D29B500F83905 /* Item+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,8 +379,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6B26XFY35T;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Todey/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -352,6 +393,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.LondonMarathon.Todey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -362,8 +404,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6B26XFY35T;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Todey/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -372,6 +418,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.LondonMarathon.Todey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -399,19 +446,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		A3B15BA0255CD9EC00D0B2AB /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A3B15BA1255CD9EC00D0B2AB /* DataModel.xcdatamodel */,
-			);
-			currentVersion = A3B15BA1255CD9EC00D0B2AB /* DataModel.xcdatamodel */;
-			path = DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = A338E5FF25578A9D00A9E6A9 /* Project object */;
 }
