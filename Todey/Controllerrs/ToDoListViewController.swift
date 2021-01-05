@@ -20,6 +20,7 @@ class ToDoListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     @IBAction func addBarButtonPressed(_ sender: UIBarButtonItem) {
@@ -36,6 +37,7 @@ class ToDoListViewController: UITableViewController {
                         try realm.write {
                             let newItem = Item()
                             newItem.title = item
+                            newItem.timeStamp = Date()
                             currentCategory.items.append(newItem)
                             realm.add(newItem)
                         }
@@ -115,6 +117,7 @@ extension ToDoListViewController {
                 } catch {
                     print("error in to do list didselect \(error)")
                 }
+                tableView.deleteRows(at: [indexPath], with: .fade)
             }
         }
         let swipeActions = UISwipeActionsConfiguration(actions: [contextItem])
@@ -127,11 +130,9 @@ extension ToDoListViewController {
 extension ToDoListViewController: UISearchBarDelegate {
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-//        let request: NSFetchRequest<Item> = Item.fetchRequest()
-//        let predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchBar.text!)
-//        request.predicate = predicate
-//        request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
-//        loadItems(with: request, predicate: predicate)
+        
+        todoItems = todoItems?.filter("title CONTAINS[cd] %@", searchBar.text ?? "").sorted(byKeyPath: "timeStamp", ascending: true)
+        tableView.reloadData()
     }
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
